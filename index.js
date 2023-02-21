@@ -58,7 +58,9 @@ Aşağıdakileri yapın:
 
    İPUCU: Number metoduna bakabilirsin
 */
-
+let deger1 = "1999";
+deger1 = Number(deger1);
+console.log(deger1);
 
 
 /*
@@ -86,10 +88,11 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(x){ 
- return x * 7
+function kopeginYasi(yas){ 
+  yas = yas * 7
+ return yas
 };
-console.log(kopeginYasi(3));
+
 
 /* Görev 3 */
 /*
@@ -106,8 +109,30 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 */
 
 function oyun(oyuncu, bilgisayar){
-  /*buraya kodunu yazabilirsin*/
+  switch (oyuncu) {
+    case "Taş":
+      return bilgisayar === "Makas"
+        ? "Kazandın!"
+        : bilgisayar === "Kağıt"
+        ? "Kaybettin!"
+        : "Beraberlik";
+
+    case "Kağıt":
+      return bilgisayar === "Makas"
+        ? "Kaybettin!"
+        : bilgisayar === "Kağıt"
+        ? "Beraberlik"
+        : "Kazandın!";
+
+    case "Makas":
+      return bilgisayar === "Makas"
+        ? "Beraberlik"
+        : bilgisayar === "Kağıt"
+        ? "Kazandın!"
+        : "Kaybettin!";
+  }
 }
+
 
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
 /*
@@ -125,6 +150,19 @@ function oyun(oyuncu, bilgisayar){
 Örn: console.log(oyun("Makas",bilgisayarinSecimi()))
 */
 
+function bilgisayarinSecimi() {
+  let RandomSayi = Math.random() * 3;
+  if (RandomSayi < 1) {
+    return "Taş";
+  } else if (RandomSayi < 2) {
+    return "Makas";
+  } else {
+    return "Kağıt";
+  }
+}
+
+console.log(oyun("Makas", bilgisayarinSecimi()));
+
 /* Görev 4 : Metrik Dönüştürücü */
 
 //Görev 4a - Kilometreden Mil
@@ -136,7 +174,8 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamlayın:
 */
 
 function milDonusturucu(km){
-  /*buraya kodunu yazabilirsin*/
+  km = km * 0.621371
+  return km;
 }
 
 
@@ -151,8 +190,9 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 Google'da arama ipucu: "feet cm dönüştürme"
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function feetDonusturucu(cm){
+  cm = cm * 0.032808398950131232
+  return cm;
 }
 
 
@@ -170,9 +210,12 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
-      /*buraya kodunu yazabilirsin*/
+function cocukSarkisi(oAnkiMaymunAdedi){
+  return oAnkiMaymunAdedi + " küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!";
 }
+let maymunAdedi = 5;
+for( let i = maymunAdedi; i > 0 ; i--)
+console.log(cocukSarkisi(i));
 
 
 /* Görev 6 : Not Hesaplayıcı */
