@@ -20,7 +20,10 @@ Aşağıdakileri yapın:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
-
+let surucuYasi = 29;
+if(surucuYasi > 18) {
+  console.log("true")
+};
 
 /*
 Görev 1b - Değerler (puanlamaya dahil değildir)
@@ -34,6 +37,13 @@ Aşağıdakileri yapınız:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
+let birinciDeger = 30;
+let ikinciDegeri = 45;
+
+if (birinciDeger > ikinciDegeri) {
+  birinciDeger = 25;
+  console.log(birinciDeger)
+}
 
 
 
@@ -51,7 +61,6 @@ Aşağıdakileri yapın:
 
 
 
-
 /*
 Görev 1d - Çarpma
  
@@ -61,10 +70,10 @@ Aşağıdakileri yaparak carpma isimli fonksiyonu tamamlayın:
    3. console.log(carpma(7,4)) ile yazdığınız fonsiyonu test edin. Console'da sonucu 28 olarak görmelisiniz.
 */
 
-function carpma(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function carpma(a, b){
+ return a * b
 }
-
+console.log(carpma(7,4))
 
 
 
@@ -77,11 +86,10 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
-}
-
-
+function kopeginYasi(x){ 
+ return x * 7
+};
+console.log(kopeginYasi(3));
 
 /* Görev 3 */
 /*
