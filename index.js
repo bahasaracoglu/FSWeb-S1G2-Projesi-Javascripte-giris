@@ -20,10 +20,10 @@ Aşağıdakileri yapın:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
-let surucuYasi = 29;
-if(surucuYasi > 18) {
+let surucuYasi = 16;
+if(surucuYasi >= 18) {
   console.log("true")
-};
+} else {console.log("false")};
 
 /*
 Görev 1b - Değerler (puanlamaya dahil değildir)
@@ -38,10 +38,10 @@ Aşağıdakileri yapınız:
 */
 
 let birinciDeger = 30;
-let ikinciDegeri = 45;
+let ikinciDegeri = 20;
 
 if (birinciDeger > ikinciDegeri) {
-  birinciDeger = 25;
+  birinciDeger = 26;
   console.log(birinciDeger)
 }
 
@@ -135,7 +135,7 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamlayın:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
+function milDonusturucu(km){
   /*buraya kodunu yazabilirsin*/
 }
 
@@ -190,8 +190,20 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/){
-/*buraya kodunu yazabilirsin*/
+function notHesapla(not){
+let sonuc = "";
+if (not <= 100 && not >=90) {
+  sonuc = "A aldın";
+}else if (not <= 89 && not >=80) {
+    sonuc = "B aldın";
+}else if (not <= 79 && not >=70) {
+  sonuc = "C aldın";
+}else if (not <= 69 && not >=60) {
+  sonuc = "D aldın";
+}else if (not <= 59 && not >=0) {
+  sonuc = "F aldın";
+}
+return sonuc;
 }
 
 
